@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover, maximum-scale=5" />
+    <meta name="theme-color" content="#10151c" />
+    <title>Myova — Gym &amp; Body Transformation</title>
+    <meta name="description" content="Personal on-device gym and body-transformation tracker." />
+
+    <!-- PWA (relative paths so it works at any hosting subpath) -->
+    <link rel="manifest" href="manifest.webmanifest" />
+    <link rel="icon" type="image/png" href="icons/icon-192.png" />
+    <link rel="apple-touch-icon" href="icons/apple-touch-icon.png" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <meta name="apple-mobile-web-app-title" content="Myova" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <script type="module" crossorigin src="./assets/index-Ccp-1CYr.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CV_fouD3.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // Register the service worker (relative), only in a secure context.
+      if ('serviceWorker' in navigator && window.isSecureContext) {
+        window.addEventListener('load', () => {
+          navigator.serviceWorker.register('sw.js').catch(() => {})
+        })
+      }
+    </script>
+  </body>
+</html>
